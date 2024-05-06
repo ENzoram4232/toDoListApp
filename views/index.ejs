@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/index.css">
+    </head>
+    <body>
+        <h1>Tasks inbox</h1>
+        <form id="newTask" class="newTask">
+            <input
+                type="text"
+                name="newTaskInput"
+                id="newTaskInput"
+                placeholder="New task"/>
+            <input
+                type="button"
+                id="newTaskSubmit"
+                value="Add Task"/>
+
+        </form>
+
+        <label class="output" id="output"></label>
+
+        <script>
+            const task = document.getElementById("newTaskInput");
+            const createBtn = document.getElementById("newTaskSubmit");
+            const output = document.getElementById("output");
+
+            function createTask() {
+                var newfield = document.createElement('input');
+                newfield.setAttribute('type','text');
+                newfield.setAttribute('siz', 50);
+                newfield.value = task.value;
+
+                output.appendChild(newfield);
+            }
+            
+            createBtn.addEventListener('click', createTask); 
+
+        </script>
+    </body>
+</html>
