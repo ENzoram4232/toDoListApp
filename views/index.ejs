@@ -28,7 +28,9 @@
             function createTask() {
                 var newfield = document.createElement('input');
                 newfield.setAttribute('type','text');
-                newfield.setAttribute('siz', 50);
+                newfield.setAttribute('width', 30);
+                newfield.setAttribute('height', 10);
+                newfield.setAttribute('class', 'newTask');
                 newfield.value = task.value;
 
                 output.appendChild(newfield);

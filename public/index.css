@@ -1,4 +1,22 @@
 * {
     font-family: sans-serif;
+    text-decoration: none;
 }
 
+#newTaskSubmit{
+    background-color: initial;
+    border: none;
+    color: #535353;
+    cursor: pointer;
+    font-family: inherit;
+    margin: 0;
+}
+
+#newTaskSubmit {
+    transition: opacity .2s ease-in-out;
+}
+
+.newTask{
+    border-radius: 5px;
+    color: #80b9b9;
+}
