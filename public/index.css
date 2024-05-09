@@ -1,22 +1,90 @@
 * {
     font-family: sans-serif;
     text-decoration: none;
+    outline: none;
 }
 
-#newTaskSubmit{
-    background-color: initial;
+body {
+    width: 100%;
+}
+
+.parent {
+    width: 105%;
+    height: 135px;
+    position: relative;
+    top: 45px;
+}
+
+.child {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.newTaskInput {
+    height: 35px;
+    width: 210px;
+    border-radius: 40px;
+    background-color: lightgray;
+    text-indent: 10px;
     border: none;
-    color: #535353;
+}
+
+.newTaskSubmit {
+    background-color: initial;
+    height: 37px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: rgb(255, 78, 78);
+    color: #ffffff;
     cursor: pointer;
     font-family: inherit;
-    margin: 0;
+    border-color: none;
+    border: none;
+    position: relative;
+    right: 38px;
 }
 
-#newTaskSubmit {
-    transition: opacity .2s ease-in-out;
+.newTaskSubmit:hover {
+    background-color: rgb(231, 66, 72);
+    color: rgb(255, 255, 255);
 }
 
-.newTask{
+.output {
+    display: flex;
+    flex-direction: column;
+}
+
+.newTaskOutput {
     border-radius: 5px;
-    color: #80b9b9;
+    width: 250px;
+    height: 40px;
+    align-self: center;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    text-indent: 10px;
+    
+}
+
+.deleteButton {
+    width: 40px;
+    height: 45px;
+    background-color: rgb(321, 66, 72);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+    flex-grow: 1;
+    position: relative;
+    left: 110px;
+    bottom: 56px;
+}
+
+.deleteButton:hover {
+    background-color: rgb(231, 66, 72);
+}
+
+h1 {
+    position: relative;
+    top: 20px;
+    left: 50px;
 }
