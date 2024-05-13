@@ -7,7 +7,7 @@
         <h1>Tasks inbox</h1>
         <div class="parent">
             <div class="child">
-                <form id="newTask" class="newTask">
+                <form id="newTask" class="newTask" action="/form_post">
                     <input
                         type="input"
                         id="newTaskInput"
@@ -23,15 +23,18 @@
             </div>
         </div>
 
-        <div class="output" id="output"></div>
-
+        <div class="output" id="output"> </div>
 
         <script>
             const task = document.getElementById("newTaskInput");
             const createBtn = document.getElementById("newTaskSubmit");
             const output = document.getElementById("output");
-
+            const form = document.getElementById("newTask");
+            
             function createTask() {
+                var div = document.createElement('div');
+                div.setAttribute('class', 'taskOutput');
+
                 var newfield = document.createElement('input');
                 newfield.setAttribute('class', 'newTaskOutput');
                 newfield.value = task.value;
@@ -40,16 +43,32 @@
                 deleteButton.setAttribute('class', 'deleteButton');
                 deleteButton.innerHTML = "-";
 
-                output.appendChild(newfield);
-                output.appendChild(deleteButton);
-                deleteButton.addEventListener('click', deleteTask);
+                var checkedIcon = document.createElement('img');
+                checkedIcon.setAttribute('src', '/unchecked.png');
+                checkedIcon.setAttribute('class', 'checkIcon');
+
+                div.appendChild(newfield);
+                div.appendChild(deleteButton);
+                div.appendChild(checkedIcon);
+                output.appendChild(div);
+                deleteButton.addEventListener('mousedown', deleteTask);
+
+                checkedIcon.addEventListener('mousedown', function() {
+                    checkedIcon.setAttribute('src', '/checked.png');
+                })
 
             }
 
             function deleteTask(event) {
                 console.log(event.target);
+                event.target.parentNode.remove();
                 event.target.remove();
             }
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+                createTask();
+            })
             
             createBtn.addEventListener('click', createTask);
 

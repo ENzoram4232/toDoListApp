@@ -9,7 +9,7 @@ body {
 }
 
 .parent {
-    width: 105%;
+    width: 102.8%;
     height: 135px;
     position: relative;
     top: 45px;
@@ -17,7 +17,7 @@ body {
 
 .child {
     margin: 0 auto;
-    width: 300px;
+    width: 299px;
 }
 
 .newTaskInput {
@@ -49,39 +49,51 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.output {
+.taskOutput {
     display: flex;
     flex-direction: column;
+    border: none;
 }
 
 .newTaskOutput {
-    border-radius: 5px;
-    width: 250px;
+    border-radius: 50px;
+    width: 285px;
     height: 40px;
     align-self: center;
     flex-grow: 1;
-    margin-bottom: 10px;
+    margin-bottom: -25px;
     text-indent: 10px;
     
 }
 
 .deleteButton {
-    width: 40px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     background-color: rgb(321, 66, 72);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     align-self: center;
     flex-grow: 1;
     position: relative;
-    left: 110px;
-    bottom: 56px;
+    left: 122px;
+    bottom: 16px;
 }
 
 .deleteButton:hover {
     background-color: rgb(231, 66, 72);
 }
+
+.checkIcon {
+    width: 36px;
+    height: 36px;
+    align-self: center;
+    position: relative;
+    left: 79px;
+    bottom: 51px;
+    transition: width height .8s .5s;
+}
+
 
 h1 {
     position: relative;
